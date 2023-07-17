@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.scss"
+import $ from "jquery"
+import Landing from "./components/Landing/Landing"
+import Navigation from "./components/Navigation/Navigation";
+const App=() => {
 
-function App() {
+  const [theme,setTheme]=useState(true)
+
+        const toggleHandler = ()=>{
+            if(theme){
+                $("body"). css({"background-color":"#011930", "color":"white"});
+                setTheme(!theme)
+            }else{
+                $("body"). css({"background-color":"white", "color":"#011930"});
+                setTheme(!theme)
+            }
+        }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation theme={theme} toggler={()=>toggleHandler()}/> 
+      <Landing/>
     </div>
   );
 }

@@ -1,0 +1,52 @@
+.navigation-wrapper{
+
+}
+
+.navigation{
+    padding: .5rem 0;
+    // background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__figure{
+        padding: 0;
+        margin: 0;
+        &_logo{
+            height:4rem;
+            background-color:blueviolet;
+            border-radius: 10px;
+            box-shadow: 0 1rem 1rem rgba($color-techtitans-secondary,.8);
+        }
+    }
+    &__toggle-btn{
+        border-radius: 18px;
+        height: 1.5rem;
+        width: 3.5rem;
+        position: relative;
+        padding: 0;
+        transition: .2s ease-out;
+        & img{
+            transition: .2s ease-out;
+            height: 150%;
+            transform: translate(-50%,-50%);
+        }
+        &--light{
+            border: 2px solid $color-black;
+            background-color: $color-white;
+            & img{
+                position: absolute;
+                top:50%;
+                left:25%;
+            }
+        }
+        &--dark{
+            border: 2px solid $color-white;
+            background-color: $color-techtitans-btn-secondary;
+            & img{
+                position: absolute;
+                top:50%;
+                left:75%;
+            }
+        }
+    }
+}

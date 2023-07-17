@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0 10rem;
+    position: relative;
+    font-family: $font-heading;
+    transition: .2s linear;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.font-heading{
+    font-family: $font-heading;
+    font-size: 3rem;
+    margin: 2rem 0;
+    &--large{
+        font-size: 5rem;
+    }
+}
+
+.font-content{
+    font-family: $font-content;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btn{
+    border: none;
+    transition: .2s linear;
+    &:hover{
+        transform: translateY(-3px);
+    }
+    &:active{
+        transform: translateY(3px);
+    }
+}
+
+.btn-primary{
+    color: $color-white;
+    background-color: $color-techtitans-btn-primary;
+    border-radius: 10px;
+}
+
+
+
+
