@@ -4,6 +4,7 @@ body{
     position: relative;
     font-family: $font-heading;
     transition: .2s linear;
+    color: $color-techtitans-primary;
 }
 
 html{
@@ -15,7 +16,15 @@ html{
     font-size: 3rem;
     margin: 2rem 0;
     &--large{
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+    &--xLarge{
+        text-transform: uppercase;
+        perspective: 1500px;
+        font-size: 10rem;
+        &_div{
+            margin-bottom: -1.5rem;
+        }
     }
 }
 
@@ -25,6 +34,7 @@ html{
 
 button{
     cursor: pointer;
+    font-family: $font-content;
 }
 
 .btn{

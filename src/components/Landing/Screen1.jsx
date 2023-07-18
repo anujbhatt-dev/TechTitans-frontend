@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Aos from "aos"
+import "aos/dist/aos.css"
 import cArrow from "../../assets/images/circular-arrows.png"
 
 const Screen1 =()=>{
@@ -14,21 +16,26 @@ const Screen1 =()=>{
         }
         setFactorial(fact)
     }
+
     const factorialHandler=(e)=>{
         setNumber(e.target.value)
     }
     
+    Aos.init({
+        duration: 2000,
+        delay: 0
+      });
 
     
 
     return <div className="screen1">
             <div className="screen1__1">
-                <div className="font-heading">Code.Create.Conquor</div>
+                <div style={{marginTop:"-8rem"}} className="font-heading">Code.Create.Conquer</div>
                 <button className="btn btn-primary screen1__1_btn">Get Started</button>
             </div>
             <div className="screen1__2">
                 <div className="screen1__2_boxes">
-                    <div className="box box--1">
+                    <div data-aos="flip-right" className="box box--1">
                         <button onClick={()=>setLevel(1)} className="box--1__btn">Run</button>
                         <div className="box--1__code">
                             <div>let factorial=1</div><br/>
@@ -39,19 +46,20 @@ const Screen1 =()=>{
                             <div>console.log{"('The factorial is')"+factorial}</div>
                         </div>
                     </div>
-                    <div className="box box--2">
+                    <div data-aos="flip-left" className="box box--2">
                         {level==0?<img src={cArrow} alt="" />:<img className="add-animation-codeLoad" src={cArrow} alt="" />}
                     </div>
-                    <div className="box box--3">
+                    <div data-aos="flip-right" className="box box--3">
                         
                         {level==1?<>
                             <button onClick={factorialCalculator} className="box--3__btn">Submit</button>
+                            <div>Enter a Number</div>
                             <input className="box--3__input" onChange={factorialHandler} type="text" value={number}/>
                         </>:null}
                     </div>
-                    <div className="box box--4">
-                        {level!=0?<button onClick={()=>setLevel(0)} className="box--3__btn">Reset</button>:null}
-                        {factorial}
+                    <div data-aos="flip-left" className="box box--4">
+                        {level!=0?<><button onClick={()=>setLevel(0)} className="box--3__btn">Reset</button>{factorial}</>:null}
+                        
                     </div>
                 </div>
             </div>

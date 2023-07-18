@@ -1,6 +1,6 @@
 const Screen3 =()=>{
     return <div className="screen3">
-            <h3>Screen3</h3>
+            <center className="font-heading font-heading--xLarge">Vision</center>
     </div>
 }
 

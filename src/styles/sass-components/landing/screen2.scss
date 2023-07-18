@@ -1,0 +1,43 @@
+.screen2{
+    &__heading{
+        
+    }
+    &__items{
+        &_item{
+            margin: 10rem 0;
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            flex-grow: 1;
+        }
+    }
+}
+
+.item{
+    &__img{
+        height: 20rem;
+        width: 30rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        box-shadow: 0 .5rem .5rem $color-techtitans-btn-secondary;
+    }
+    &__digit{
+        text-align: center;
+        font-weight: 900;
+        font-size: 10rem;
+        width: 50%;
+        position: relative;
+        top:-1rem;
+    }
+    &__text{
+        text-align: justify;
+        &_heading{
+            font-weight: bold;
+        }
+        &_content{
+            line-height: 1.5;
+        }
+
+    }
+}
