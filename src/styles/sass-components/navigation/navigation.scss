@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .navigation-wrapper{
 
 }
@@ -26,6 +27,7 @@
 
 .navigation{
     padding: .5rem 10rem;
+    padding-top: 2rem;
     // background-color: aqua;
     display: flex;
     justify-content: space-between;
@@ -42,24 +44,29 @@
            display: none;
         }
         &_anchor{
-            
-            color:rgba($color-grey,1);
-            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            color:rgba($color-grey,.8);
+            text-transform: capitalize;
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 0 .5rem;
             padding: .5rem .5rem;
             border-radius: 5px;            
-            text-shadow: 0 1rem 2rem rgba($color-black,.8);
+            // text-shadow: 0 1rem 2rem rgba($color-black,.8);
             transition: .2s all;
+            font-weight: 600;
+            &--img{
+                border-radius: 50%;  
+                padding: .2rem .2rem;    
+            }
             @include respond(phone){
                 margin: .5rem 0;
                 width: 50%;
             }
             & img{
-                height: 2.5rem;
-                width: 2.5rem;
+                height: 2rem;
+                width: 2rem;
                 object-fit: cover;
                 object-position: center;
                 border-radius: 50%;

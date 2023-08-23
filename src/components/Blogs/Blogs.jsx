@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router";
+import moment from "moment";
 
 const Blogs=(props)=>{
     const [events,setEvents]= useState([]);
@@ -20,25 +21,20 @@ const Blogs=(props)=>{
     const handleClick =(event)=>{
         navigate(`/blogs/${event.title}`,{state:{...event}})
     }
-    return <div className="Event">
+    return <div className="events">
+            <div className="events__mainTitle">Blogs</div>
                 {events.map(event=>{
                     return (
-                        <div className="eventWrapper">
-                        <div className="event">
-                            <div className="flex-wrapper">
-                                <div className="event__createdAt"><span>Date </span>{event.createdAt}</div>
-                                <div className="event__status"><span>Author </span>{event.author}</div>                    
-                            </div>
-                            {/* <div className="flex-wrapper">
-                                <div className="event__type"><span>Type </span>{event.type}</div>
-                                <div className="event__createdAt"><span>Announced on </span>{event.createdAt}</div>
-                            </div> */}
-                            <div className="event__name">{event.title}</div>
-                            <div className="event__description">{event.content.slice(0,25)+"..."}</div>
-                            <button onClick={()=>handleClick(event)} className="btn btn-primary">Quick View</button>
-                            {/*  */}
-                        </div>
-                        </div>    
+                        <div onClick={()=>handleClick(event)} className="event row">
+                            <img className="event__miniImg" src={`http://localhost:3001/api/blogs/${event._id}/image`} alt="" />
+                            <div className="event__2">
+                                <div className="event__name">{event.title.length>=24?event.title.slice(0,23)+"...":event.title}</div>
+                                <div className="flex-wrapper">
+                                    <div className="event__createdAt">{moment(event.eventDate).format('Do MMM YYYY')}</div>
+                                    <div className="event__readMore">read more</div>
+                                </div>
+                            </div>                        
+                        </div>   
                     )
                 })}
             </div>

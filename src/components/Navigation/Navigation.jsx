@@ -30,7 +30,7 @@ const Navigation = (props)=>{
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--2 " to="/blogs">blogs</NavLink> 
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/events">events</NavLink>
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/gallary">gallary</NavLink>
-                            <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/myprofile">
+                            <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--img navigation__anchorWrapper_anchor--3 " to="/myprofile">
                                 <img src={`data:image/jpg;base64,${props.user.pic}`}/>
                             </NavLink>
 

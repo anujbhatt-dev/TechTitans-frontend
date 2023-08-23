@@ -1,29 +1,83 @@
-.eventWrapper{
-    background-color: rgba($color-black,1);
-    color: $color-white;
-    margin: 5rem 10rem;
-    border-radius:10px;
-    padding: .1rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.events{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: justify;
+    flex-wrap: wrap;
+    // min-height: 100dvh;
+    &__mainTitle{    
+        font-size: 3rem;
+        font-weight: bolder;
+        // text-align: center;
+        margin: 5rem 0;
+        text-transform: capitalize;
+        flex-basis: 100%;
+        padding-left: 8rem;
+        @include respond(phone){
+            padding-left: 2rem;
+        }
+    }
+}
+.event{
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 1rem;
+    border-radius: 20px;
+    background-color: rgba($color-grey,.1);
+    box-shadow: 0 0 2rem rgba($color-grey,.1);
+    padding: 1rem .5rem;
+    // width: 25rem;
+    transition: .2s all;
+    &:hover{
+        transform: translateY(-3px);
+    }
+    &:active{
+        transform: translateY(3px);
+    }
+    &.row{
+        flex-direction: row;
+    }
+    &__readMore{
+        color: #0863ff;
+        margin-left: 2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .9rem;
+        text-shadow: 0 0 .5rem rgba($color-techtitans-btn-primary,.1);
+    }
+    &__2{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+    }
     & button{
         width: 10rem;
         padding: .5rem 1rem;
         margin: 1rem 0;
     }
-}
-.event{
-    // margin-top: 5rem;
-    padding: 0 10rem;
-    display: flex;
-    // justify-content: space-between;
-    // align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    background: url("../../../assets/images/waves-1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    &__mainTitle{
+
+    }
+    &__createdAt{
+        font-size: .9rem;
+    }
+    &__miniImg{
+        height: 6rem;
+        width: 10rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
     & span{
         color:$color-grey;
     }
@@ -38,9 +92,11 @@
         margin: 1rem auto;
     }
     &__name{
-        font-size: 3.5rem;
-        font-weight: bold;
+        font-size: 1.4rem;
+        font-weight: 500;
         text-transform:capitalize;
+        margin-bottom: 1rem;
+        max-width: 10rem;
 
     }
     &__description{
@@ -58,3 +114,4 @@
         border-radius: 10px;
     }
 }
+@import "./singleEvent.scss";

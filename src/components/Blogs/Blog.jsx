@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router";
+import moment from "moment";
 import gallary11 from "../../assets/images/gallary11.jpg";
 
 const Blog=(props)=>{
@@ -25,22 +26,15 @@ const Blog=(props)=>{
     return <div className="Event">
                 
                     
-                <div className="event">
+                <div className="singleEvent">
+                            <div className="singleEvent__name">{event.title}</div>
+                            <img className="singleEvent__img" src={`http://localhost:3001/api/blogs/${event._id}/image`} />                        
+                            <div className="singleEvent__description">{event.content}</div>                           
                             <div className="flex-wrapper">
-                                <div className="event__createdAt"><span>Date </span>{event.createdAt}</div>
-                                <div className="event__status"><span>Author </span>{event.author}</div>                    
+                                <div className="singleEvent__createdAt"><span>published on </span>{moment(event.createdAt).format('Do MMM YYYY')}</div>
+                                <div className="singleEvent__status"><span>Author </span>{event.author}</div>                    
                             </div>
-                            <img className="event__img" src={`http://localhost:3001/api/blogs/${event._id}/image`} />
-                            <div className="flex-wrapper">
-                                {/* <div className="event__type"><span>Type </span>{event.type}</div> */}
-                                <div className="event__createdAt"><span>Announced on </span>{event.createdAt}</div>
-                            </div>
-                            <div className="event__name">{event.title}</div>
-                            <div className="event__description">{event.content}</div>                           
-                            {/*  */}
-                        </div>    
-                    
-                
+                </div>    
             </div>
 }
 
