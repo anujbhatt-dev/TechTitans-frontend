@@ -1,0 +1,32 @@
+.myProfile{
+    // width: 50%;
+    padding: 1rem;
+    & > button{
+        padding: .5rem 1rem;
+    }
+    & > div{
+        font-size:1.2rem ;
+        margin-bottom: .5rem;
+        text-transform: capitalize;
+
+        & > span{
+            color: $color-grey;
+            margin-right: 1rem;
+        }
+    }
+    // border: 2px solid black;
+    background-color: $color-techtitans-secondary;
+    border-radius:10px
+}
+.myProfile__wrapper{
+    height: 80vh;
+    margin: 0 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../../assets/images/myprofile.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

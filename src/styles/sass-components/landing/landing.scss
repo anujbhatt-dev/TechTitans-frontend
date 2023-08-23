@@ -1,2 +1,17 @@
+
 @import "./screen1.scss";
 @import "./screen2.scss";
+@import "./screen3.scss";
+@import "./screen4.scss";
+@import "./screen5.scss";
+
+.landing{
+    padding: 0 10rem;
+    overflow: hidden;
+    @include respond(tab-land){
+        padding: 0 2rem;    
+    }
+    @include respond(tab-land){
+        padding: 0 .5rem;    
+    }
+}

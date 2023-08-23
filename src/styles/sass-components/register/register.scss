@@ -1,0 +1,79 @@
+.register{
+  display: flex;
+  margin: 0 10rem;
+  margin-bottom: 5rem;
+  height: 100dvh;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../../assets/images/circles-1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include respond(phone){
+    flex-direction: column;
+    margin: 0 1rem;
+    justify-content: center;
+  }
+  & center{
+    text-transform: uppercase;
+    text-align: left;
+    @include respond(phone){
+      text-align: center;
+    } 
+  }
+    & form {
+      max-width: 40rem;
+      // margin: 3rem;
+      padding: 2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: $color-techtitans-tertiary;
+      display: flex;
+      // flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include respond(phone){
+        // margin: 0 1rem;
+      }
+      & > div{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 48%;
+      }
+    }
+    
+    label {
+      font-size: 1rem;
+      color:$color-white;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      margin-bottom: .3rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      border: none;
+      height: 2rem;
+      padding-left: .5rem;
+      border-radius: 10px;
+      &::placeholder{
+          font-family: $font-content;
+      }
+    }
+    
+    button,a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.6rem;
+      width: 9rem;
+      height: 2rem;
+      cursor: pointer;
+      font-size:.8rem;
+    }
+    
+    
+}
+

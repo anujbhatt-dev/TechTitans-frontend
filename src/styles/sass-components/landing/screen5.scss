@@ -1,0 +1,70 @@
+.screen5{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    background: url("../../../assets/images/circles-1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include respond(phone){
+        padding: 1rem;
+    }
+    &__text{
+        flex-basis: 50%;
+        &_head{
+
+        }
+        &_para{
+            line-height: 2;
+            text-align: justify;
+            // font-family: 'Gloria Hallelujah', cursive;
+        }
+        @include respond(phone){
+            flex-basis: 100%;
+            &_head{
+                font-weight: bold;
+            }
+        }
+    }
+    & video{
+        position: absolute;
+        z-index: -1;
+        // width: 100%;
+        height: 100dvh;
+        // left: -10rem;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 1rem;
+        width: 25rem;
+        background: $color-techtitans-tertiary;
+        border-radius: 18px;
+        margin-top: 3rem;
+        &_label{
+            font-size: 1.5rem;
+            color:$color-white;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            margin-bottom: .3rem;
+
+        }
+        & input{
+            border: none;
+            height: 3rem;
+            padding-left: .5rem;
+            &::placeholder{
+                font-family: $font-content;
+            }
+        }
+        &_submit{
+            margin-top: 1rem;
+            width: 10rem;
+        }
+    }
+}

@@ -1,21 +1,86 @@
+
 .navigation-wrapper{
 
 }
 
+.sidebarToggler{
+    z-index: 1001;
+    display: none;
+    @include respond(phone){
+        display: flex;
+    }
+}
+.sidebar{
+    position: fixed;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-techtitans-primary,1);
+    z-index: 1000;
+    padding: 5rem 1rem;
+    width: 100dvw;
+    animation: sidebar .2s ease-in;
+}
+
+
+
 .navigation{
-    padding: .5rem 0;
+    padding: .5rem 10rem;
     // background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include respond(tab-land){
+        padding: .5rem 1rem;
+        // justify-content: center;
+    }
+    &__anchorWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(tab-land){
+           display: none;
+        }
+        &_anchor{
+            
+            color:rgba($color-grey,1);
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 .5rem;
+            padding: .5rem .5rem;
+            border-radius: 5px;            
+            text-shadow: 0 1rem 2rem rgba($color-black,.8);
+            transition: .2s all;
+            @include respond(phone){
+                margin: .5rem 0;
+                width: 50%;
+            }
+            & img{
+                height: 2.5rem;
+                width: 2.5rem;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+            &:hover{
+                transform: translateY(-3px);
+            }
+            &:active{
+                transform: translateY(3px);
+            }
+        }
+    }
     &__figure{
         padding: 0;
         margin: 0;
         &_logo{
-            height:4rem;
+            height:3rem;
             background-color:blueviolet;
             border-radius: 10px;
             box-shadow: 0 1rem 1rem rgba($color-techtitans-secondary,.8);
+            // z-index: 10001;
         }
     }
     &__toggle-btn{
@@ -49,4 +114,11 @@
             }
         }
     }
+}
+
+.active{
+    background-color: rgba($color-black,.9);
+    color:$color-white;
+    box-shadow: 0 1rem 2rem -1rem rgba($color-black,.8);
+
 }

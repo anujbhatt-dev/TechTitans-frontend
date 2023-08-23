@@ -1,0 +1,36 @@
+.screen3{
+    position: relative;
+    &__text{
+        background-image: url("../../../assets/images/triangle.png");
+        background-repeat:no-repeat;
+        background-size: contain;
+        background-position:center;
+        margin-top: 8rem;
+        // font-family: 'Gloria Hallelujah', cursive;
+        width: 75%;
+        font-size: 2rem;
+        margin: auto;
+        line-height: 2.5;
+        z-index: 2;
+        @include respond(phone){
+            font-size: 1.2rem;
+            line-height: 2.5;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    &__heading{
+        position: relative;
+        &_img{
+            transform: translate(-50%,-50%) rotate(90deg);
+            position: absolute;
+            top: 60%;
+            left: 25.4%;
+            @include respond(phone){
+                left: 15.4%;
+                top: 50%;
+                // transform: translate(-50%,-50%) rotate(0deg);
+            }
+        }
+    }
+}

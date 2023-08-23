@@ -2,8 +2,6 @@ import image1 from "../../assets/images/image1.jpg"
 import image2 from "../../assets/images/image2.jpg"
 import image3 from "../../assets/images/image3.jpg"
 import image4 from "../../assets/images/image4.jpg"
-import image5 from "../../assets/images/image5.jpg"
-import image6 from "../../assets/images/image6.jpg"
 
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -11,8 +9,8 @@ import "aos/dist/aos.css"
 const Screen2 =()=>{
 
     Aos.init({
-        duration: 500,
-        delay: 100
+        duration: 100,
+        delay: 0
       });
 
     return <div className="screen2">
@@ -21,11 +19,12 @@ const Screen2 =()=>{
                 <div data-aos-once="true" data-aos="flip-down" className="screen2__heading_div screen2__heading_div--2">Do in</div>
                 <div data-aos-once="true" data-aos="flip-down" className="screen2__heading_div screen2__heading_div--3">TechTitans?</div>  
             </center>
+
             <div className="screen2__items screen2__items--1">
                 {/* first */}
-                <div data-aos-once="true" data-aos="slide-right" className="screen2__items_item screen2__items_item--1">
+                <div className="screen2__items_item screen2__items_item--1">
                     <img className="item__img" src={image1} alt="" />
-                    <div className="item__digit">1</div>
+                    <div data-aos-once="true" data-aos="flip-down" className="item__digit">1</div>
                     <div className="item__text">
                         <div className="item__text_heading font-heading">
                             Coding Challenges
@@ -37,9 +36,11 @@ const Screen2 =()=>{
 
                 </div>
 
+                <hr  className="hr-primary"/>
+
                 {/* second */}
 
-                <div data-aos-once="true" data-aos="slide-left" className="screen2__items_item screen2__items_item--1">
+                <div className="screen2__items_item screen2__items_item--1">
                     <div className="item__text">
                         <div className="item__text_heading font-heading">
                             Workshops and Training
@@ -48,16 +49,17 @@ const Screen2 =()=>{
                         We conduct workshops and training sessions on popular programming languages, frameworks, and technologies. These sessions provide hands-on learning opportunities, allowing members to gain practical knowledge and stay updated with the latest industry trends
                         </div>
                     </div>
-                    <div className="item__digit">2</div>
+                    <div data-aos-once="true" data-aos="flip-left" className="item__digit">2</div>
                     <img className="item__img" src={image2} alt="" />
 
                 </div>
 
+                <hr  className="hr-primary"/>
                 {/* third */}
 
-                <div data-aos-once="true" data-aos="slide-right" className="screen2__items_item screen2__items_item--1">
+                <div className="screen2__items_item screen2__items_item--1">
                     <img className="item__img" src={image3} alt="" />
-                    <div className="item__digit">3</div>
+                    <div data-aos-once="true" data-aos="flip-left" className="item__digit">3</div>
                     <div className="item__text">
                         <div className="item__text_heading font-heading">
                             Mentorship Programs
@@ -69,9 +71,11 @@ const Screen2 =()=>{
 
                 </div>
 
+                <hr  className="hr-primary"/>
+
                 {/* fourth */}
 
-                <div data-aos-once="true" data-aos="slide-left" className="screen2__items_item screen2__items_item--1">
+                <div className="screen2__items_item screen2__items_item--1">
                     <div className="item__text">
                         <div className="item__text_heading font-heading">
                             Guest Lectures and Tech Talks
@@ -80,43 +84,12 @@ const Screen2 =()=>{
                             We invite industry experts, guest speakers, and renowned professionals to deliver engaging talks and share insights on emerging technologies, career development, and industry trends. These sessions inspire and motivate members, broadening their knowledge and perspectives.
                         </div>
                     </div>
-                    <div className="item__digit">4</div>
+                    <div data-aos-once="true" data-aos="flip-left" className="item__digit">4</div>
                     <img className="item__img" src={image4} alt="" />
 
                 </div>
 
-                {/* fifth */}
-
-                <div data-aos-once="true" data-aos="slide-right" className="screen2__items_item screen2__items_item--1">
-                    <img className="item__img" src={image5} alt="" />
-                    <div className="item__digit">5</div>
-                    <div className="item__text">
-                        <div className="item__text_heading font-heading">
-                            Networking Opportunities
-                        </div>
-                        <div className="font-content item__text_content">
-                            We organize networking events, meetups, and social gatherings to connect like-minded individuals in the coding and development community. These events provide a platform for members to share ideas, collaborate, and build valuable relationships.
-                        </div>
-                    </div>
-
-                </div>
-
-
-                {/* sixth */}
-
-                <div data-aos-once="true" data-aos="slide-left" className="screen2__items_item screen2__items_item--1">
-                    <div className="item__text">
-                        <div className="item__text_heading font-heading">
-                            Learning Resources
-                        </div>
-                        <div className="font-content item__text_content">
-                            We curate a collection of educational resources, including coding tutorials, articles, and recommended books, to support members in their learning journey. These resources are accessible on our website, offering a centralized hub for knowledge enhancement.
-                        </div>
-                    </div>
-                    <div className="item__digit">6</div>
-                    <img className="item__img" src={image6} alt="" />
-
-                </div>
+                
                 
             </div>
     </div>

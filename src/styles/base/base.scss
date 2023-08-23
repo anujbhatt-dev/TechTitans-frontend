@@ -1,14 +1,27 @@
 body{
     margin: 0;
-    padding: 0 10rem;
+    
     position: relative;
     font-family: $font-heading;
     transition: .2s linear;
     color: $color-techtitans-primary;
+    min-height: 120dvh;
+    
 }
+
 
 html{
     overflow-x: hidden;
+}
+
+
+a{
+    text-decoration: none;
+}
+.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .font-heading{
@@ -19,11 +32,47 @@ html{
         font-size: 4rem;
     }
     &--xLarge{
-        text-transform: uppercase;
+        // text-transform: uppercase;
         perspective: 1500px;
         font-size: 10rem;
         &_div{
             margin-bottom: -1.5rem;
+        }
+    }
+    @include respond(tab-land){
+        &--large{
+            font-size: 2rem;
+        }
+        &--xLarge{
+            font-size: 8rem;
+            &_div{
+                margin-bottom: -1.5rem;
+            }
+        }
+    }
+    @include respond(tab-port){
+        &--large{
+            font-size: 2rem;
+        }
+        &--xLarge{
+            font-size: 6rem;
+            &_div{
+                margin-bottom: -1.5rem;
+            }
+        }
+    }
+    @include respond(phone){
+        text-align: center;
+        font-size: 2rem;
+        &--large{
+            font-size: 2rem;
+        }
+        &--xLarge{
+            font-size: 4rem;
+            font-weight: bold;
+            &_div{
+                margin-bottom: -1.5rem;
+            }
         }
     }
 }
@@ -40,18 +89,43 @@ button{
 .btn{
     border: none;
     transition: .2s linear;
+    border-radius: 10px;
     &:hover{
         transform: translateY(-3px);
     }
     &:active{
         transform: translateY(3px);
     }
+    @include respond(phone){
+        border-radius: 5px;
+    }
 }
 
 .btn-primary{
     color: $color-white;
     background-color: $color-techtitans-btn-primary;
-    border-radius: 10px;
+}
+
+.btn-success{
+    color: $color-white;
+    background-color: $color-techtitans-btn-success;
+}
+
+.btn-secondary{
+    background-color: $color-techtitans-btn-secondary;
+}
+
+.hr-primary{
+    margin: 5rem auto;
+    width: 5rem;
+    border: none;
+    border-bottom: 1rem dotted rgba(grey,.5);
+    @include respond(phone){
+        margin: 1rem auto;
+        width: 2.5rem;
+        border-bottom: .1rem solid rgba(grey,.5);
+    }
+    
 }
 
 

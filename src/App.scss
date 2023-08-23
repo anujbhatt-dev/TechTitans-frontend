@@ -1,5 +1,6 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500;1,700&family=Gloria+Hallelujah&family=Homemade+Apple&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
 
 
 // abstracts
@@ -17,4 +18,25 @@
 @import "styles/sass-components/prelanding.scss";
 
 //landing
-@import "styles/sass-components/landing/landing.scss"
+@import "styles/sass-components/landing/landing.scss";
+
+//register
+@import "styles/sass-components/register/register.scss";
+
+// //dashboard
+// @import "styles/sass-components/dashboard/dashboard.scss";
+
+//event
+@import "styles/sass-components/events/event.scss";
+
+//gallary
+@import "styles/sass-components/gallary/gallary.scss";
+
+//myprofile
+@import "styles/sass-components/myProfile/myProfile.scss";
+
+//blogs
+@import "styles/sass-components/blogs/blogs.scss";
+
+//footer
+@import "styles/sass-components/footer/footer.scss";

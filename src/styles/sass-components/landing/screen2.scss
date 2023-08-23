@@ -1,14 +1,35 @@
 .screen2{
+
     &__heading{
-        
+        background-image: url("../../../assets/images/sqdots.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        @include respond(phone){
+            // background-size: cover;
+        }
     }
     &__items{
+        background-image: url("../../../assets/images/doublecomma.png");
+        background-position: center;
+        background-size: contain;
+        // background-repeat: repeat-y;
+        background-attachment: fixed;
+        @include respond(phone){
+            background-image: none;
+            // background-size: cover;
+        }
         &_item{
             margin: 10rem 0;
             display: flex;
             justify-content: center;
             align-items:flex-start;
             flex-grow: 1;
+            @include respond(phone){
+                flex-wrap: wrap;
+                margin: 1rem 0;
+            }
         }
     }
 }
@@ -21,6 +42,9 @@
         object-position: center;
         border-radius: 10px;
         box-shadow: 0 .5rem .5rem $color-techtitans-btn-secondary;
+        @include respond(phone){
+            display: none;
+        }
     }
     &__digit{
         text-align: center;
@@ -29,6 +53,9 @@
         width: 50%;
         position: relative;
         top:-1rem;
+        @include respond(phone){
+            display: none;
+        }
     }
     &__text{
         text-align: justify;
@@ -36,7 +63,7 @@
             font-weight: bold;
         }
         &_content{
-            line-height: 1.5;
+            line-height: 2;
         }
 
     }

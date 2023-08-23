@@ -1,3 +1,12 @@
+@keyframes preserve3d{
+  0%{
+    transform: rotate3d(0,0,0,0);
+  }
+  100%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+}
+
 @keyframes codeLoad {
   0%{
     transform: rotate(0);
@@ -8,6 +17,43 @@
   }
 }
 
+@keyframes clippy {
+  0%{
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  25%{
+    clip-path: polygon(74% 0, 100% 53%, 68% 100%, 0 76%, 0 21%);
+  }
+  50%{
+    clip-path: polygon(91% 0, 100% 79%, 54% 100%, 0 76%, 11% 0);
+  }
+  75%{
+    clip-path: polygon(100% 25%, 100% 79%, 54% 100%, 0 53%, 50% 0);
+  }
+  100%{
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+    filter: blur(3px);
+  }
+  100%{
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes sidebar {
+  0%{
+    width:0;
+  }
+  100%{
+    width:100dvw;
+  }
+}
 
 
 // @keyframes slideleft {

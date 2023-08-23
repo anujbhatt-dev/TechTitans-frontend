@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom"
 import logo from "../assets/images/logo.png"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const Prelanding = ()=>{
+    console.log(process.env);
+    
     return <div className="prelanding">
                 <div className="prelanding__imgWrapper">
                     <img src={logo} alt="techtitans logo" />

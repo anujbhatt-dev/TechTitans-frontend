@@ -5,14 +5,19 @@ import Screen4 from "./Screen4"
 import Screen5 from "./Screen5"
 import Screen6 from "./Screen6"
 
-const Landing =()=>{
+const Landing =(props)=>{
     return <div className="landing">
-            <Screen1/>
+            <Screen1 authenticated={props.authenticated} theme={props.theme}/>
+            <hr className="hr-primary"/>
             <Screen2/>
+            <hr className="hr-primary"/>
             <Screen3/>
-            <Screen4/>
+            <hr className="hr-primary"/>
             <Screen5/>
-            <Screen6/>
+            <hr className="hr-primary"/>
+            <Screen4/>
+            {/* <hr className="hr-primary"/>
+            <Screen6/> */}
     </div>
 }
 
