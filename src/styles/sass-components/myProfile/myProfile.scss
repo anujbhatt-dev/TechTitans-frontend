@@ -1,32 +1,79 @@
 .myProfile{
-    // width: 50%;
-    padding: 1rem;
-    & > button{
-        padding: .5rem 1rem;
-    }
-    & > div{
-        font-size:1.2rem ;
-        margin-bottom: .5rem;
-        
-        & > span{
-            color: $color-grey;
-            text-transform: capitalize;
-            margin-right: 1rem;
-        }
-    }
-    // border: 2px solid black;
-    // background-color: $color-techtitans-secondary;
-    border-radius:10px
-}
-.myProfile__wrapper{
-    height: 80vh;
+    min-height: 80vh;
     margin: 0 10rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    // flex-direction: column;
     // background-image: url("../../../assets/images/myprofile.png");
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    position: relative;
+    margin-top: 2rem;
+    gap: 1rem;
+    &__info{
+        // position:absolute;
+        background-color: rgba($color-grey,.5);
+        box-shadow: 0 1rem 1rem rgba($color-black,.5);
+        padding: 2rem;
+        position: sticky;
+        top: 2rem;
+        border-radius: 10px;
+        & > img{
+            height: 10rem;
+            width: 10rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            
+        }
+        & >*{
+            & > span{
+                display: none;
+            }
+        }
+        &_name{
+            font-size: 1.2rem;
+        } 
+        &_username{
+            font-size: 1rem;
+            color: $color-grey;
+            margin-top: .5rem;
+        } 
+        &_email{
+            margin: 1rem 0;
+            font-size: 1rem;
+        } 
+        &_phone{
+
+        }
+        & button{
+            padding: 1rem 2rem;
+            background-color: tomato;
+            margin-top: 1.5rem;
+            transition: .2s all;
+            border-radius: 10px;
+            &:hover{
+                background-color: red;
+            }
+        }
+    }
+    &__resume{
+        flex-grow: 1;
+        &_create{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            border: 1px solid rgba($color-grey,.2);
+            border-radius: 10px;
+            & button{
+                padding: 1rem 4rem;
+                color: $color-techtitans-btn-primary;
+                background-color: transparent;
+                border: none;
+                font-size: 1rem;
+            }
+        }
+    }
 }

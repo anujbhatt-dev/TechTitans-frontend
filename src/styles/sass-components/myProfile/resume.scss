@@ -1,0 +1,108 @@
+.resume{
+    border: 1px solid rgba($color-grey,.5);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    border-radius: 5px;
+    min-height: 100vh;
+    background-color: rgba($color-white,1);
+    color: rgba($color-techtitans-secondary,1);
+    box-shadow: 1rem 2rem 1rem -1rem rgba($color-black,.5);
+    margin: 1rem;
+    margin-bottom: 3rem;
+    color: rgba($color-black,1);
+    padding: 1rem 5rem;
+    &__hr{
+        border: none;
+        border-bottom: 1px solid rgba($color-grey,.1);
+        // width: 90%;
+        margin:  auto;
+
+    }
+    &__section{
+        font-size: .9rem;
+        padding: 1rem 0rem;
+        display: flex;
+        // text-transform: capitalize;
+        line-height: 2;
+        &_items{
+            flex-basis: 75%;
+            &_item{
+                margin-bottom: 1rem;
+                &_detail{
+                    color: rgba($color-grey,1);
+                    & b{
+                        font-weight: 500;
+                        color: rgba($color-grey,1);
+                    }
+                    & span{
+                        text-transform: capitalize;
+                        color: rgba($color-black,1);
+                    }
+                    // margin-bottom: .5rem;
+                }
+            }
+        }
+        &_head{
+            flex-basis: 25%;
+            color: rgba($color-grey,1);
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+        &_content{
+            // flex-grow: 1;
+            flex-basis: 75%;
+            text-align: justify;
+            &_title{
+                // margin-bottom: .5rem;
+                text-transform: capitalize;
+                font-weight: 400;
+                // line-height: 2;
+            }
+
+        }
+    }
+    &__header{
+        padding: 1rem 0rem;
+        // background-color:rgba($color-techtitans-secondary,.5);
+        // padding-bottom:.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        // border-bottom: 1px solid rgba($color-grey,.5);
+        & img{
+            // position: relative;
+            // top: 4rem;
+            // right: 3rem;
+            border-radius: 10px;
+            height: 10rem;
+            width: 10rem;
+            margin-right: 1rem;
+            // transform: scale(1.5);
+        }
+        &_contact{
+            // flex-grow: 1;
+            &_name{
+                text-transform: capitalize;
+                font-size: 2.5rem;
+                margin-bottom: -0.5rem;
+                // font-weight: 900;
+                word-spacing: .1rem;
+
+
+            }
+            &_email{
+                font-size: 1rem;
+                // margin-bottom: .5rem;
+                color: rgba($color-grey,1);
+            }
+            &_phone{
+                font-size: 1rem;
+                color: rgba($color-grey,1);
+                // margin-bottom: .5rem;
+            }
+        }
+
+    }
+}
