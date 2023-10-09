@@ -14,7 +14,7 @@ const Prelanding = ()=>{
                 Join our dynamic coding club! Dive into software development, web design, and app creation. Collaborate, learn, and innovate with like-minded enthusiasts. Unleash your coding potential today!
                 </div>
                 <Link to="/home">
-                <button className="btn btn-primary screen1__1_btn">Proceed</button>
+                <button className="btn btn-primary screen1__1_btn">inaugurate</button>
                 </Link>
             </div>
 }

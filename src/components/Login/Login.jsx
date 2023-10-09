@@ -20,7 +20,7 @@ const Register = (props) => {
     axios.post("/users/login",formData).then(res=>{
       console.log(res.data);
       props.getAuthenticated(res.data)
-      navigate("/whatsnew")
+      navigate("/events")
     }).catch(e=>console.log(e))
   };
 

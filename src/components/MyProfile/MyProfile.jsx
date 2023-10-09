@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Resume from "./Resume"
+import CreateResume from "../MyProfile/CreateResume"
+import Resume from "../MyProfile/Resume"
 
 const MyProfile = (props) =>{
     const [resume,setResume] =useState(null)
@@ -28,7 +29,7 @@ const MyProfile = (props) =>{
                     {
                         resume?
                         <Resume resume={resume} user={props.user}/>:
-                        <div className="myProfile__resume_create"><button>create your resume</button></div>
+                        <CreateResume />
                     }
                 </div>
     </div>
