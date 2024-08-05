@@ -50,7 +50,7 @@ const Register = (props) => {
             required
             />
         </div>
-        <button className='btn btn-primary' type="submit">Sign In</button>
+        <button className='btn btn-primary' type="submit">Log In</button>
         <Link className='btn btn-primary btn-secondary' to="/register" >Register</Link>
         </form>
     </div>

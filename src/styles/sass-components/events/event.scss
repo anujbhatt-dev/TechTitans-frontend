@@ -7,6 +7,9 @@
     text-align: justify;
     flex-wrap: wrap;
     margin-bottom: 50dvh;
+    @include respond(phone){
+        margin-bottom: 5dvh;
+    }
     &__mainTitle{    
         font-size: 3rem;
         font-weight: bolder;
@@ -17,6 +20,8 @@
         padding-left: 8rem;
         @include respond(phone){
             padding-left: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
         }
     }
 }

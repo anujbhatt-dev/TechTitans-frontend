@@ -9,6 +9,7 @@
     display: none;
     @include respond(phone){
         display: flex;
+        height: 30px;
     }
 }
 .sidebar{

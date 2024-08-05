@@ -28,7 +28,7 @@ const Blog=(props)=>{
                     
                 <div className="singleEvent">
                             <div className="singleEvent__name">{event.title}</div>
-                            <img className="singleEvent__img" src={`http://localhost:3001/api/blogs/${event._id}/image`} />                        
+                            <img className="singleEvent__img" src={`https://techtitans-backend-deploy-production.up.railway.app/api/blogs/${event._id}/image`} />                        
                             <div className="singleEvent__description">{event.content}</div>                           
                             <div className="flex-wrapper">
                                 <div className="singleEvent__createdAt"><span>published on </span>{moment(event.createdAt).format('Do MMM YYYY')}</div>

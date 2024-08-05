@@ -23,8 +23,8 @@ const Register = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post("/users",formData).then(res => {
-      props.getAuthenticated(res.data)
-      navigate("/whatsnew")
+      // props.getAuthenticated(res.data)
+      navigate("/login")
     }).catch(e=> console.log(e))
   };
 

@@ -28,7 +28,7 @@ const Events=(props)=>{
                         // <div className="eventWrapper">
                             <div onClick={()=>handleClick(event)} className="event row">
                                 
-                                <img className="event__miniImg" src={`http://localhost:3001/api/events/${event._id}/image`}/>
+                                <img className="event__miniImg" src={`https://techtitans.chickenkiller.com/api/events/${event._id}/image`}/>
                                 <div className="event__2">
                                     <div className="event__name">{event.name.length>=24?event.name.slice(0,23)+"...":event.name}</div>                    
                                     <div className="flex-wrapper">

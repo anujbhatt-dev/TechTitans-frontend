@@ -42,7 +42,7 @@ const Event=(props)=>{
                                 <div className="singleEvent__status"><span>time </span>{event.eventTime}</div>          
                                 <div><span>status </span>{event.status}</div>          
                             </div>
-                            <img className="singleEvent__img" src={`http://localhost:3001/api/events/${event._id}/image`} />
+                            <img className="singleEvent__img" src={`https://techtitans-backend-deploy-production.up.railway.app/api/events/${event._id}/image`} />
                             <div className="flex-wrapper">
                                 <div className="singleEvent__type"><span>Type </span>{event.type}</div>
                                 <div className="singleEvent__createdAt"><span>Announced on </span>{moment(event.createdAt).format('Do MMM YYYY')}</div>

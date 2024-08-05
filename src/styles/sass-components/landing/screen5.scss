@@ -17,7 +17,7 @@
     &__text{
         flex-basis: 50%;
         &_head{
-
+            text-align: left;
         }
         &_para{
             line-height: 2;
@@ -52,7 +52,9 @@
             margin-top: 1rem;
             text-transform: uppercase;
             margin-bottom: .3rem;
-
+            @include respond(phone){
+                font-size: 1rem;
+            }
         }
         & input{
             border: none;
@@ -60,6 +62,11 @@
             padding-left: .5rem;
             &::placeholder{
                 font-family: $font-content;
+            }
+        }
+        & textarea{
+            @include respond(phone){
+                padding-left: .5rem;
             }
         }
         &_submit{

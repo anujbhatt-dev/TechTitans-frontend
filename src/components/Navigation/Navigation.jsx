@@ -26,24 +26,24 @@ const Navigation = (props)=>{
                         </figure>
                         </Link>
                         <div className="navigation__anchorWrapper">
-                            <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--1 " to="/whatsnew">whatsnew</NavLink> 
+                            {/* <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--1 " to="/whatsnew">whatsnew</NavLink>  */}
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--2 " to="/blogs">blogs</NavLink> 
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/events">events</NavLink>
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/gallary">gallary</NavLink>
                             <NavLink className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--img navigation__anchorWrapper_anchor--3 " to="/myprofile">
-                                <img src={`data:image/jpg;base64,${props.user.pic}`}/>
+                                <img src={`data:image/jpg;base64,${props.user.pic}`|| ``}/>
                             </NavLink>
 
                         </div>
                         <button className={props.theme?"navigation__toggle-btn navigation__toggle-btn--light":"navigation__toggle-btn navigation__toggle-btn--dark"} onClick={props.toggler}>{props.theme?<img src={lighttoggle} />:<img src={darktoggle}/>}</button>
                         {sidebarToggle?
                         <div className="sidebar">
-                            <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--1 " to="/whatsnew">whatsnew</NavLink> 
+                            {/* <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--1 " to="/whatsnew">whatsnew</NavLink>  */}
                             <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--2 " to="/blogs">blogs</NavLink> 
                             <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/events">events</NavLink>
                             <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/gallary">gallary</NavLink>
                             <NavLink onClick={()=>{setSidebarToggle(!sidebarToggle)}} className="navigation__anchorWrapper_anchor navigation__anchorWrapper_anchor--3 " to="/myprofile">My Profile 
-                                <img src={`data:image/jpg;base64,${props.user.pic}`}/>
+                                <img src={`data:image/jpg;base64,${props.user.pic}` || ``}/>
                             </NavLink>
                             
                         </div>:null}

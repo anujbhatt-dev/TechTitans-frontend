@@ -1,13 +1,17 @@
 .screen2{
 
     &__heading{
+
         background-image: url("../../../assets/images/sqdots.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         background-attachment: fixed;
         @include respond(phone){
-            // background-size: cover;
+            background-size: cover;
+            font-size: 3rem;
+            text-align: left;
+
         }
     }
     &__items{
@@ -61,9 +65,19 @@
         text-align: justify;
         &_heading{
             font-weight: bold;
+            @include respond(phone){
+                font-size: 2rem;
+                font-weight: normal;
+                margin-bottom: .5rem;
+            }
         }
         &_content{
             line-height: 2;
+            @include respond(phone){
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.5;
+            }
         }
 
     }

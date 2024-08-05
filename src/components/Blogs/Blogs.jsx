@@ -26,7 +26,7 @@ const Blogs=(props)=>{
                 {events.map(event=>{
                     return (
                         <div onClick={()=>handleClick(event)} className="event row">
-                            <img className="event__miniImg" src={`http://localhost:3001/api/blogs/${event._id}/image`} alt="" />
+                            <img className="event__miniImg" src={`https://techtitans.chickenkiller.com/api/blogs/${event._id}/image`} alt="" />
                             <div className="event__2">
                                 <div className="event__name">{event.title.length>=24?event.title.slice(0,23)+"...":event.title}</div>
                                 <div className="flex-wrapper">

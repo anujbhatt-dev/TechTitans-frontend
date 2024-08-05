@@ -11,10 +11,10 @@ const Prelanding = ()=>{
                     <img src={logo} alt="techtitans logo" />
                 </div>
                 <div className="prelanding__text">
-                Join our dynamic coding club! Dive into software development, web design, and app creation. Collaborate, learn, and innovate with like-minded enthusiasts. Unleash your coding potential today!
+                    Join our dynamic coding club! Dive into software development, web design, and app creation. Collaborate, learn, and innovate with like-minded enthusiasts. Unleash your coding potential today!
                 </div>
                 <Link to="/home">
-                <button className="btn btn-primary screen1__1_btn">inaugurate</button>
+                    <button className="btn btn-primary screen1__1_btn">Proceed</button>
                 </Link>
             </div>
 }
